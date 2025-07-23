@@ -6,8 +6,8 @@ const progBar = document.getElementById("progressBar");
 const progStat = document.getElementById("progressStatus");
 const dueEl = document.getElementById("dueTxt");
 
-const startDate = new Date("2024-08-04T00:00:00");
-const endDate = new Date("2024-02-03T00:00:00");
+const startDate = new Date("2025-08-04T00:00:00");
+const endDate = new Date("2027-02-03T00:00:00");
 
 const totalSpan = endDate.getTime() - startDate.getTime();
 
