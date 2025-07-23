@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Pretendard, "Courier New", Courier, monospace;
+  background: #eeeefa;
+}
+
+#wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+
+  @media (min-width: 480px) and (max-width: 961px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 481px) {
+    font-size: 12px;
+  }
+}
+
+#messageBox {
+  position: absolute;
+  bottom: 10vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+
+  @media only screen and (max-width: 961px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+
+#timeBox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+#timeBox .time-divider {
+  color: #3b3d5a;
+  font-size: 3.2em;
+  font-weight: 500;
+  letter-spacing: -2.88px;
+}
+
+#timeBox .time-element .title {
+  display: block;
+  color: #9799c1;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+#timeBox .time-element .value {
+  margin-top: 10px;
+  display: block;
+  color: #3b3d5a;
+  font-size: 3.2em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -2.88px;
+}
+
+#progressBox {
+  margin-top: 10px;
+}
+
+#progressBar {
+  border-radius: 0px 15px;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  &.completed {
+    background-color: #008000;
+  }
+}
+
+#progressStatus {
+  padding: 0 10px;
+  border-radius: 0 15px 15px 0;
+  display: inline-block;
+  min-width: min-content;
+  height: 28px;
+  line-height: 28px;
+  text-align: right;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  &:not(.pending):not(.completed) {
+    color: #ffffff;
+    background-color: #4d55cc;
+  }
+  &.pending {
+    color: #3b3d5a;
+    background-color: #ffffff;
+  }
+  &.completed {
+    color: #ffffff;
+    background-color: transparent;
+  }
+}
+
+#dueTxt {
+  margin-top: 5px;
+  display: block;
+  color: #000000;
+  text-align: right;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: -0.72px;
+}
+
+#iconBox {
+  width: 280px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media (min-width: 480px) and (max-width: 961px) {
+    width: 210px;
+  }
+
+  @media only screen and (max-width: 481px) {
+    width: 180px;
+  }
+}
+
+#iconBox img {
+  width: inherit;
+}
+
+#messageBox {
+  color: #3b3d5a;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 12px;
+}
