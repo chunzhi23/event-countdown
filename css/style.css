@@ -1,15 +1,18 @@
 body {
   margin: 0;
   font-family: Pretendard, "Courier New", Courier, monospace;
-  background: #eeeefa;
+  background-color: #eeeefa;
+  /* background-image: url("../assets/img/camouflage-background.png"); */
 }
 
 #wrap {
-  height: 100vh;
+  height: 100dvh;
+  min-height: 476px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  position: relative;
 
   @media (min-width: 480px) and (max-width: 961px) {
     font-size: 16px;
@@ -18,11 +21,6 @@ body {
   @media only screen and (max-width: 481px) {
     font-size: 12px;
   }
-}
-
-#messageBox {
-  position: absolute;
-  bottom: 10vh;
 }
 
 #container {
@@ -138,6 +136,8 @@ body {
 }
 
 #messageBox {
+  position: absolute;
+  bottom: 10dvh;
   color: #3b3d5a;
   font-size: 1.2em;
   font-weight: 400;
